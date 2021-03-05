@@ -1,6 +1,6 @@
 {
   "name": "@draeggiar/react-utils",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A simple package containing utilities useful with everyday react development.",
   "main": "./src/index.js",
   "types": "./types/index.d.js",
