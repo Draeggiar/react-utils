@@ -20,14 +20,14 @@
   "bugs": {
     "url": "https://github.com/Draeggiar/react-utils/issues"
   },
-  "homepage": "https://github.com/Draeggiar/react-utils#readme",
+  "homepage": "https://github.com/Draeggiar/react-utils",
   "peerDependencies": {
     "react": ">=15.0.1",
     "react-dom": ">=15.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.13.8",
-    "@babel/preset-env": "^7.13.9",
+    "@babel/core": "7.13.8",
+    "@babel/preset-env": "7.13.9",
     "babel-loader": "^8.2.2",
     "react": ">=16.9.0",
     "react-dom": ">=16.9.0",

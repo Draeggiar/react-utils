@@ -1,1 +1,1 @@
-export { useLogRenderReason } from './hooks/useLogRenderReason'
+export { useLogUpdateReason } from './hooks/useLogUpdateReason'

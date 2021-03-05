@@ -1,13 +1,13 @@
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 
 /**
- *  Hook used to determine why component rendered.
+ *  Hook for diagnostig purposes. Helps to determine what made component update. 
  *
- * @param {string} name - Component name
- * @param {object} props - Component props
+ * @param {string} name - Component name.
+ * @param {object} props - Component props.
  * @param {object} state - Component state. Can be composed from multiple state properties (i.e. `{ prop1: true, prop2: 'state' }`).
  */
-export const useLogRenderReason = (name, props, state = {}) => {
+export const useLogUpdateReason = (name, props, state = {}) => {
     const prevProps = useRef(props);
     const prevState = useRef(state);
 
