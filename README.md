@@ -8,14 +8,12 @@ A simple package containing utilities useful with everyday react development.
 
 ## Installation
 
----
-
-`npm install --save @draeggiar/react-utils`
+```
+npm install --save @draeggiar/react-utils
+```
 
 ## Package contents
 
----
-
 ### Hooks
 
-- `useLogUpdateReason` - Hook for diagnostig purposes. Helps to determine what made component update. 
+- `useLogUpdateReason` - Hook for diagnostig purposes. Helps to determine what made component update.

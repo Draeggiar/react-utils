@@ -1,4 +1,4 @@
+.vscode
+dist
 webpack.config.js
 .gitignore
-dist
-.vscode
