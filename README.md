@@ -17,9 +17,11 @@ npm install --save @draeggiar/react-utils
 
 ### Hooks
 
-- `useLogUpdateReason` - Hook for diagnostig purposes. Helps to determine what made component update.
+-   `useLogUpdateReason` - Hook for diagnostig purposes. Helps to determine what made component update.
 
 ```javascript
+import { useLogUpdateReason } from '@draeggiar/react-utils'
+
 const MyComponent = props => {
     const [state, setState] = useState();
 
@@ -29,8 +31,39 @@ const MyComponent = props => {
 }
 ```
 
-- ~~`useMemoCompare`~~ - TODO
-- ~~`useCallbackCompare`~~ - TODO
+-   `useMemoCompare` - Used to memoize value based on dependencies. Similar to `useMemo`, but provides option to specify custom equality function to compare dependencies.
+
+```javascript
+import { useMemoCompare } from '@draeggiar/react-utils';
+import isEqual from 'lodash/isEqual';
+
+const MyComponent = props => {
+    const memoizedValue = useMemoCompare(() => "some value", [dep1, dep2], isEqual);
+
+    return ...
+}
+```
+
+In this example dependencies are deep compared using lodash `isEqual`, insted of default `useMemo` shallow comparison.
+
+-   `useCallbackCompare` - Used to memoize function based on dependencies. Similar to `useCallback`, but provides option to specify custom equality function to compare dependencies.
+
+```javascript
+import { useCallbackCompare } from '@draeggiar/react-utils';
+import isEqual from 'lodash/isEqual';
+
+const MyComponent = props => {
+	const memoizedCallback = useCallbackCompare(
+		args => {
+			...
+		},
+		[dep1, dep2],
+		isEqual
+	);
+
+    return ...
+}
+```
 
 ## Contribution
 
